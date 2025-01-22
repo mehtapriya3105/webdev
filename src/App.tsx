@@ -1,14 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import Kambaz  from './Kambaz'
+import Labs from "./labs";
+import Kambaz from "./Kambaz";
 
+import { HashRouter,Routes,Route,Navigate} from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <h1>Welcome to Web Dev</h1>
-  )
+    <HashRouter>
+      <div>
+        <h1>Welcome to Web Dev</h1>
+        <Routes>
+        <Route path="/" element={<Navigate to="Kambaz"/>}/>
+          <Route path="/Labs/*" element={<Labs />} />
+          <Route path="/Kambaz/*" element={<Kambaz />} />
+
+        </Routes>
+
+      </div>
+    </HashRouter>
+  );
 }
 
-export default App
+export default App;
