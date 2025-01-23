@@ -2,6 +2,10 @@ export default function Lab1() {
   return (
     <div id="wd-lab1">
       <h2>Lab 1</h2>
+      <h3>
+        Name: Priya Rupesh Mehta
+        GitHub Rpository:<a href="https://github.com/mehtapriya3105/webdev.git">Git </a>
+      </h3>
       <h3>HTML Examples</h3>
       <div id="wd-h-tag">
         <h4>Heading Tags</h4>
@@ -127,7 +131,7 @@ export default function Lab1() {
         Loading a local image:
        
         <br />
-        <img id="wd-teslabot" src="public/images/react.png" height="200px" />
+        <img id="wd-teslabot" src="public/react.png" height="200px" />
       </div>
       <div id="wd-forms">
         <h4>Form Elements</h4>

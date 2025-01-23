@@ -10,7 +10,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/1234/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="public/images/react.png" width={200}/>
+            <img src="public/react.png" width={200}/>
             <div>
               <h5> CS1234 React JS </h5>
               <p className="wd-dashboard-course-title">
@@ -26,7 +26,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/1235/Home"
             className="wd-dashboard-course-link"
           >
-             <img src="public/images/react.png" width={200}/>
+             <img src="public/react.png" width={200}/>
             <div>
               <h5> CS1235 Cyber Security </h5>
               <p className="wd-dashboard-course-title">CyberSecurity Course </p>
@@ -39,7 +39,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/1236/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="public/images/react.png" width={200}/>
+            <img src="public/react.png" width={200}/>
             <div>
               <h5> CS1236 Natural Language Processing </h5>
               <p className="wd-dashboard-course-title">
@@ -54,7 +54,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/1237/Home"
             className="wd-dashboard-course-link"
           >
-             <img src="public/images/react.png" width={200}/>
+             <img src="public/react.png" width={200}/>
             <div>
               <h5> CS1237 Computer Vision Course </h5>
               <p className="wd-dashboard-course-title">
@@ -69,7 +69,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/1238/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="public/images/react.png" width={200}/>
+            <img src="public/react.png" width={200}/>
             <div>
               <h5> CS1238 Machine Learning Course </h5>
               <p className="wd-dashboard-course-title">
@@ -84,7 +84,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/1239/Home"
             className="wd-dashboard-course-link"
           >
-             <img src="public/images/react.png" width={200}/>
+             <img src="public/react.png" width={200}/>
             <div>
               <h5> CS1239 Java Programming </h5>
               <p className="wd-dashboard-course-title">Java Programming </p>
@@ -97,7 +97,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/1241/Home"
             className="wd-dashboard-course-link"
           >
-             <img src="public/images/react.png" width={200}/>
+             <img src="public/react.png" width={200}/>
             <div>
               <h5> CS1241 Python Programming </h5>
               <p className="wd-dashboard-course-title">
@@ -113,7 +113,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/1242/Home"
             className="wd-dashboard-course-link"
           >
-            <img src="public/images/react.png" width={200}/>
+            <img src="public/react.png" width={200}/>
             <div>
               <h5> CS1242 Rust Programming </h5>
               <p className="wd-dashboard-course-title">
@@ -128,7 +128,7 @@ export default function Dashboard() {
             to="/Kambaz/Courses/1243/Home"
             className="wd-dashboard-course-link"
           >
-             <img src="public/images/react.png" width={200}/>
+             <img src="public/react.png" width={200}/>
             <div>
               <h5> CS1243 SQL Programming </h5>
               <p className="wd-dashboard-course-title">
