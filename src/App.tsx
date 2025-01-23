@@ -1,4 +1,3 @@
-// import Kambaz  from './Kambaz'
 import Labs from "./labs";
 import Kambaz from "./Kambaz";
 
