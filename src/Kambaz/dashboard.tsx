@@ -78,7 +78,7 @@ export default function Dashboard() {
         <Col>
           <Card>
             <Link to="/Kambaz/Courses/1239/Home" className="text-decoration-none text-dark">
-              <Card.Img variant="top" src="/images/react.png" width="100%" height={160} />
+              <Card.Img variant="top" src="/images/java.png" width="100%" height={160} />
               <Card.Body>
                 <Card.Title>CS1239 Java Programming</Card.Title>
                 <Card.Text>Basic Java Course</Card.Text>
