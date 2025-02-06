@@ -4,37 +4,11 @@ import { IoEllipsisVerticalOutline } from "react-icons/io5";
 import { IoAddSharp } from "react-icons/io5";
 import AssignmentControll from "./AssignmentControlRight";
 import AssignmentControll1 from "./AssignmentControlLeft";
-import { IoSearchOutline } from "react-icons/io5";
 import { FaCaretDown, FaPlus } from "react-icons/fa";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 export default function Assignments() {
   return (
     <div id="wd-assignments">
-      {/* <div
-        id="wd-assignment-top-section"
-        className=" d-flex justify-content-between "
-      >
-        <div className="border border-secondary rounded-pill align-items-center w-25">
-          <IoSearchOutline className="ms-3"></IoSearchOutline>
-          <input
-            placeholder="Search.."
-            id="wd-search-assignment"
-            className="border-0 mt-1"
-          />
-        </div>
-        <div>
-          <Button
-            id="wd-add-assignment-group "
-            className="me-3"
-            variant="secondary"
-          >
-            <IoAddSharp></IoAddSharp> Group
-          </Button>
-          <Button id="wd-add-assignment " className="me-3" variant="danger">
-            <IoAddSharp></IoAddSharp>Assignment
-          </Button>
-        </div>
-      </div> */}
       <div className="row justify-content-between">
           <div className="position-relative col-md-8">
             <HiMagnifyingGlass className="position-absolute ms-2" style={{margin:"0 auto", height:"100%", left:"12px"}}/>
