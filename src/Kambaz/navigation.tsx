@@ -17,7 +17,7 @@ export default function KambazNavigation() {
         target="_blank"
         className="list-group-item bg-black border-0 text-center"
       >
-        <img src="public/images/NEU.svg" width="75px" />
+        <img src="/images/NEU.svg" width="75px" />
         
       </a>
       <Link
