@@ -91,7 +91,7 @@ export default function Dashboard() {
         <Col>
           <Card>
             <Link to="/Kambaz/Courses/1240/Home" className="text-decoration-none text-dark">
-              <Card.Img variant="top" src="/images/react.png" width="100%" height={160} />
+              <Card.Img variant="top" src="/images/python.png" width="100%" height={160} />
               <Card.Body>
                 <Card.Title>CS1240 Python Programming</Card.Title>
                 <Card.Text>Basic Python Course</Card.Text>
