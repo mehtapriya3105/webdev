@@ -1,7 +1,16 @@
 import { Form, Button, Row, Col, Table } from "react-bootstrap";
 import { RxCross1 } from "react-icons/rx";
-
+import {assignments} from "../../Database";
+import { useParams } from "react-router-dom";
 export default function AssignmentEditor() {
+  // console.log(useParams())
+  const cid_ = useParams().cid;
+  const aid_ = useParams().aid;
+  // console.log(cid_, aid_);
+  const assignment = assignments.filter(
+    (assignment: any) => assignment.course === cid_ && assignment._id === aid_
+  );
+  console.log(assignment);
   return (
     <div id="wd-assignments-editor">
       <Row>
@@ -9,7 +18,8 @@ export default function AssignmentEditor() {
           <Form>
             <Form.Group controlId="wd-name">
               <Form.Label>Assignment Name</Form.Label>
-              <Form.Control type="text" defaultValue="A1" />
+              <Form.Control type="text" defaultValue={assignment[0].title} />
+
             </Form.Group>
 
             <div className="border w-100 p-2 rounded float-end mb-3 mt-3" style={{borderColor:"#dee2e6"}}>
@@ -34,7 +44,7 @@ export default function AssignmentEditor() {
                 <Form.Label>Points</Form.Label>
               </Col>
               <Col sm={5}>
-                <Form.Control type="number" defaultValue={100} />
+                <Form.Control type="number" defaultValue={assignment[0].points} />
               </Col>
             </Row>
 
@@ -158,7 +168,7 @@ export default function AssignmentEditor() {
                   <Col>
                     <Form.Group controlId="wd-due-date">
                       <Form.Label><strong>Due </strong></Form.Label>
-                      <Form.Control type="datetime-local" defaultValue="2022-05-13T12:30" />
+                      <Form.Control type="date" defaultValue={assignment[0].due_date} />
                     </Form.Group>
                   </Col>
                 </Row>
@@ -166,13 +176,13 @@ export default function AssignmentEditor() {
                   <Col sm={6}>
                     <Form.Group controlId="wd-available-from">
                       <Form.Label><strong>Available From</strong></Form.Label>
-                      <Form.Control type="datetime-local" defaultValue="2022-05-13T12:30" />
+                      <Form.Control type="date" defaultValue= {assignment[0].available_from} />
                     </Form.Group>
                   </Col>
                   <Col sm={6}>
                     <Form.Group controlId="wd-available-until">
                       <Form.Label><strong>Until</strong></Form.Label>
-                      <Form.Control type="datetime-local" defaultValue="2022-05-13T12:30" />
+                      <Form.Control type="date" defaultValue={assignment[0].available_until} />
                     </Form.Group>
                   </Col>
                 </Row>
@@ -182,10 +192,10 @@ export default function AssignmentEditor() {
             <hr />
             <Row className="mt-4">
               <Col className="d-flex justify-content-end">
-                <Button variant="secondary" id="wd-button-save" className="me-3">
+                <Button variant="secondary" id="wd-button-save" className="me-3" href={`#/Kambaz/Courses/${cid_}/Assignments`}>
                   Save
                 </Button>
-                <Button variant="danger" id="wd-button-cancel">
+                <Button variant="danger" id="wd-button-cancel" href={`#/Kambaz/Courses/${cid_}/Assignments`}>
                   Cancel
                 </Button>
               </Col>

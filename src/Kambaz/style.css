@@ -19,7 +19,9 @@ body * {  font-family: Arial, Helvetica, sans-serif;  }
   --bs-list-group-border-color: gray;
 }
 .wd-lesson {
+  
   border-left: 3px solid green !important;
+
 }
 
 .wd.list-group > .list-group-item.active {
@@ -29,5 +31,7 @@ body * {  font-family: Arial, Helvetica, sans-serif;  }
 }
 
 .wd-assignment-multiple{
+  border: 1px solid gray !important;
   border-left: 3px solid green !important;
+  padding: 0px !important;
 }
