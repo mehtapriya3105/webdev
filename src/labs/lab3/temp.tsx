@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 export default function Abc() {
   const [a, setb] = useState({ c: "q", d: 27 });
