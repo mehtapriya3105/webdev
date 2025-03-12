@@ -43,13 +43,7 @@ export default function Signin() {
         className="mb-2"
       />
       <br />
-      {/* <Link
-        id="wd-signin-btn"
-        to="/Kambaz/Account/Profile"
-        className="btn btn-primary w-100 mb-2"
-      >
-        Sign in{" "}
-      </Link> */}
+     
 
       <Button onClick={signin} id="wd-signin-btn" className="w-100">
         {" "}

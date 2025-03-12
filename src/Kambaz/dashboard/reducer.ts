@@ -47,9 +47,26 @@ const cousesSlice = createSlice({
       );
       console.log("Updated courses", state.courses);
     },
+    addEnrollement: (state, { payload: enrollInfo }) => {
+      console.log(enrollInfo);
+      const newEnrollement: any = {
+          _id: uuidv4(),
+          user: enrollInfo.user,
+          course: enrollInfo.course,
+      };
+      state.enrollments = [...state.enrollments, newEnrollement] as any;
+      
+      console.log("After adding", state.enrollments);
+  },
+  deleteEnrollement: (state, { payload: enrollInfo }) => {
+      const enrollementID = enrollments.find(enrollment => enrollInfo.user === enrollment.user && enrollment._id === enrollInfo.courses);
+      state.enrollments = state.enrollments.filter(
+          (en: any) => en._id !== enrollementID);
+      console.log("After deleting", state.enrollments);
+  },
   },
 });
-export const { addCourse, deleteCourse, updateCourse, editCourse } =
+export const { addCourse, deleteCourse, updateCourse, editCourse ,addEnrollement, deleteEnrollement} =
 cousesSlice.actions;
 export default cousesSlice.reducer;
 

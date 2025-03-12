@@ -1,39 +1,56 @@
-import  { useState } from 'react';
-import { Button } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import { addEnrollement, deleteEnrollement } from './enrollementReducer';
+import { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { addEnrollement, deleteEnrollement } from "./reducer";
 
-const ToggleButton = ({enrollementId, userId, courseId}: { enrollementId: number, userId: number, courseId: number }) => {
-  // Track the toggle state
-  const [isToggled, setIsToggled] = useState(false);
+const ToggleButton = ({
+  userId,
+  courseId,
+}: {
+  userId: string;
+  courseId: string;
+}) => {
   const dispatch = useDispatch();
-  const { enrollementReducer } = useSelector((state: any) => state.enrollementReducer);
-// The button's click handler function
-  // Toggle handler function
-  const handleToggle = () => {
-    setIsToggled(!isToggled); 
-    if(isToggled) {
-        // Perform your enroll action here
-        console.log('Course enrolled');
-        dispatch(addEnrollement({
-            user: userId,
-            courses: courseId,
-        }));
 
+  const enrollments = useSelector(
+    (state: any) => state.coursesReducer.enrollments
+  );
+
+  const isInitiallyEnrolled = enrollments.some(
+    (enrollment: { user: string; course: string }) =>
+      enrollment.user === userId && enrollment.course === courseId
+  );
+
+  const [isToggled, setIsToggled] = useState(isInitiallyEnrolled);
+
+  useEffect(() => {
+    setIsToggled(isInitiallyEnrolled);
+  }, [isInitiallyEnrolled]);
+
+  const handleToggle = () => {
+    if (isToggled) {
+      console.log("Course unenrolled");
+      dispatch(
+        deleteEnrollement({
+          user: userId,
+          course: courseId,
+        })
+      );
     } else {
-        // Perform your unenroll action here
-        console.log('Course unenrolled');
-        dispatch(deleteEnrollement(enrollementId));
-  
+      console.log("Course enrolled");
+      dispatch(
+        addEnrollement({
+          user: userId,
+          course: courseId,
+        })
+      );
+    }
+    setIsToggled(!isToggled);
   };
-  }
-  
+
   return (
-    <Button
-      variant={isToggled ? 'danger' : 'success'} // Change the color based on state
-      onClick={handleToggle} // Toggle the state on click
-    >
-      {isToggled ? 'Unenroll' : 'Enroll'} {/* Change the text based on state */}
+    <Button variant={isToggled ? "danger" : "success"} onClick={handleToggle}>
+      {isToggled ? "Unenroll" : "Enroll"}
     </Button>
   );
 };

@@ -14,11 +14,12 @@ import { useDispatch, useSelector } from "react-redux";
 export default function Assignments() {
   const { cid } = useParams();
   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
+  const { currentUser } = useSelector((state: any) => state.accountReducer);
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
   const handleAddAssignment = () => {
-    console.log(`${location.pathname}/add`)
+    console.log(`${location.pathname}/add`);
     navigate(`${location.pathname}/add`);
   };
   return (
@@ -99,12 +100,18 @@ export default function Assignments() {
                 <div className="d-flex align-items-center">
                   <AssignmentControll />
                   <div className="ms-3 border-gray">
-                    <a
+                    {currentUser.role == "FACULTY" && <a
                       href={`#/Kambaz/Courses/${item.course}/Assignments/${item._id}`}
                       className="wd-assignment-link text-black text-decoration-none"
                     >
                       {item._id}
-                    </a>
+                    </a>}
+                    {currentUser.role != "FACULTY" && <a
+                     
+                      className="wd-assignment-link text-black text-decoration-none"
+                    >
+                      {item._id}
+                    </a>}
                     <p className="wd-assignment-details mb-0">
                       <span className="text-danger"> Multiple Modules</span> |{" "}
                       <b>Not Available until</b> {item.available_from} |<br />
@@ -112,13 +119,14 @@ export default function Assignments() {
                     </p>
                   </div>
                 </div>
-                <AssignmentControll1
-                  assignmentId={item._id}
-                  deleteAssignment={(assignmentId) => {
-                    dispatch(deleteAssignment(assignmentId));
-                  }}
-                  
-                />
+                {currentUser.role == "FACULTY" && (
+                  <AssignmentControll1
+                    assignmentId={item._id}
+                    deleteAssignment={(assignmentId) => {
+                      dispatch(deleteAssignment(assignmentId));
+                    }}
+                  />
+                )}
               </ListGroup.Item>
             ))}
         </div>
