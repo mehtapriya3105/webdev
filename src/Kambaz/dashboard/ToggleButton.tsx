@@ -15,7 +15,7 @@ const ToggleButton = ({
   const enrollments = useSelector(
     (state: any) => state.coursesReducer.enrollments
   );
-
+  console.log(enrollments)
   const isInitiallyEnrolled = enrollments.some(
     (enrollment: { user: string; course: string }) =>
       enrollment.user === userId && enrollment.course === courseId

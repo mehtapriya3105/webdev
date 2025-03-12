@@ -119,8 +119,8 @@ export default function Dashboard() {
       <Row xs={1} md={2} lg={4} className="g-4 px-3">
         {(showAllCourses
           ? courses
-          : courses.filter((cr) => isEnrolled(cr._id))
-        ).map((cr) => (
+          : courses.filter((cr:any) => isEnrolled(cr._id))
+        ).map((cr:any) => (
           <Col key={cr._id}>
             <Card>
               <Link
@@ -153,7 +153,7 @@ export default function Dashboard() {
                       variant="warning"
                       onClick={() => {
                         setCourse(cr);
-                      }} // ✅ Uses prop function
+                      }} 
                       id="wd-edit-course-click"
                     >
                       Edit

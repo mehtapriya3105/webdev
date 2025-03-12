@@ -92,7 +92,7 @@ export default function Assignments() {
         <div className="w-100">
           {assignments
             .filter((assignments: any) => assignments.course === cid)
-            .map((item: any, index: number) => (
+            .map((item: any) => (
               <ListGroup.Item
                 key={item._id}
                 className="wd-assignment-multiple d-flex justify-content-between align-items-center p-3 list-group-item border-top-0 w-100"
