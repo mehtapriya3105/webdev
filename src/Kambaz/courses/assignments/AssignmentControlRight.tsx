@@ -27,20 +27,25 @@ export default function LessonControlButtons({
 
   return (
     <div className="float-end">
-      <GreenCheckmark />
+      <GreenCheckmark 
+      />
       <FaTrash
+      className="text-danger me-2 mb-1 ml-1 mr-1"
         onClick={() => {
           handleDeleteAssignment(assignmentId);
         }}
       />
-      <FaPencil
+      <FaPencil  className="text-primary me-2 mb-1 ml-1 mr-1"
         onClick={() => {
           console.log("Edit assignments", assignmentId);
           handleEditAssignemnt();
         }}
-      />
-      <IoAddOutline className="fs-4" />
-      <IoEllipsisVertical className="fs-4" />
+      >
+        {/* Add a React.Fragment or a div here */}
+        <></>
+      </FaPencil>
+      <IoAddOutline className="fs-4  me-2 mb-1 ml-1 mr-1" />
+      <IoEllipsisVertical className="fs-4  me-2 mb-1 ml-1 mr-1" />
     </div>
   );
 }

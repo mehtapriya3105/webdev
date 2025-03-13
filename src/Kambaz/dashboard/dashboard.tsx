@@ -35,12 +35,12 @@ export default function Dashboard() {
 
   const handleUpdateCourse = () => {
     const updatedCourse = {
-      _id: course._id, // Use the ID of the course set in the state
+      _id: course._id, 
       name: course.name,
       description: course.description,
     };
-    dispatch(editCourse(updatedCourse)); // Dispatch to update the course
-    setCourse({ _id: "", name: "", description: "" }); // Clear the form after submission
+    dispatch(editCourse(updatedCourse)); 
+    setCourse({ _id: "", name: "", description: "" }); 
   };
 
   const isEnrolled = (courseId: any) => {
@@ -52,7 +52,7 @@ export default function Dashboard() {
 
   return (
     <div id="wd-dashboard">
-     {currentUser.role == "STUDENT" && 
+      {currentUser.role == "STUDENT" && (
         <Button
           variant={showAllCourses ? "primary" : "primary"}
           onClick={() => setShowAllCourses(!showAllCourses)}
@@ -60,7 +60,7 @@ export default function Dashboard() {
         >
           {showAllCourses ? "Show Enrolled Courses" : "Show All Courses"}
         </Button>
-      }
+      )}
       <h1 id="wd-dashboard-title">Dashboard</h1>
       <ProtectedRoute>
         <h5>
@@ -102,7 +102,7 @@ export default function Dashboard() {
       </ProtectedRoute>
       <hr />
       <h2 id="wd-dashboard-published">
-        Published Courses{" "}
+        Published Courses (
         {
           courses
             .map((course: { _id: any }) =>
@@ -114,13 +114,14 @@ export default function Dashboard() {
             )
             .filter((value: boolean) => value === true).length
         }
+        )
       </h2>
       <hr />
       <Row xs={1} md={2} lg={4} className="g-4 px-3">
         {(showAllCourses
           ? courses
-          : courses.filter((cr:any) => isEnrolled(cr._id))
-        ).map((cr:any) => (
+          : courses.filter((cr: any) => isEnrolled(cr._id))
+        ).map((cr: any) => (
           <Col key={cr._id}>
             <Card>
               <Link
@@ -153,7 +154,7 @@ export default function Dashboard() {
                       variant="warning"
                       onClick={() => {
                         setCourse(cr);
-                      }} 
+                      }}
                       id="wd-edit-course-click"
                     >
                       Edit
@@ -168,7 +169,9 @@ export default function Dashboard() {
                       Delete
                     </Button>
                   </ProtectedRoute>
-                 { currentUser.role == "STUDENT" &&  <ToggleButton userId={currentUser._id} courseId={cr._id} />}
+                  {currentUser.role == "STUDENT" && (
+                    <ToggleButton userId={currentUser._id} courseId={cr._id} />
+                  )}
                 </div>
               </Card.Body>
             </Card>

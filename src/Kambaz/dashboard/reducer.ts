@@ -58,23 +58,18 @@ const cousesSlice = createSlice({
       // state.enrollments.push(newEnrollement);
 
     },
-
     deleteEnrollement: (state, { payload: enrollInfo }) => {
-
-      const enrollementID = state.enrollments.find(
-        (enrollment: any) =>
-          enrollInfo.user === enrollment.user && enrollInfo.course === enrollInfo.course
+      console.log("Before deleting enrollment", state.enrollments);
+      const enrollmentToDelete = state.enrollments.find(
+        (enrollment) =>
+          enrollment.user === enrollInfo.user &&
+          enrollment.course === enrollInfo.course
       );
-
-
-      if (enrollementID) {
-        console.log("enrollementID: ", enrollementID._id);
-
-
+      if (enrollmentToDelete) {
         state.enrollments = state.enrollments.filter(
-          (en: any) => en._id !== enrollementID._id
+          (enrollment) => enrollment._id !== enrollmentToDelete._id
         );
-        console.log("After deleting", state.enrollments);
+        console.log("After deleting enrollment", state.enrollments);
       } else {
         console.log("Enrollment not found");
       }
