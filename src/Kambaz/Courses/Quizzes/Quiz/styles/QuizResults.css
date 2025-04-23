@@ -1,0 +1,92 @@
+/* src/Lab6/Quiz/styles/QuizResults.css */
+
+.result-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.result-container h2 {
+  margin-bottom: 1.5rem;
+  color: #343a40;
+  font-size: 1.8rem;
+}
+
+.result-score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.result-message {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #6c757d;
+}
+
+.review-button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+.review-button:hover {
+  background-color: #0069d9;
+}
+
+.review-instruction {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 1rem;
+}
+
+/* Add some animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+
+.result-actions {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.retake-button {
+  background-color: #4c9aff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.retake-button:hover {
+  background-color: #2c7be5;
+}
+
+.result-info {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #666;
+}

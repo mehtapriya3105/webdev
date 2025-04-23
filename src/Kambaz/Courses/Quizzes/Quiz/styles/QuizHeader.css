@@ -1,0 +1,31 @@
+.quiz-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .quiz-header h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  .quiz-preview {
+    background-color: #f9f3f1;
+    color: #8a1f11;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .quiz-preview i {
+    margin-right: 5px;
+  }
+  
+  .quiz-status {
+    color: #6b7780;
+    font-size: 14px;
+    margin-top: 5px;
+  }

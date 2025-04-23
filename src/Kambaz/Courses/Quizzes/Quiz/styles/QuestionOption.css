@@ -1,0 +1,36 @@
+.option {
+    margin-bottom: 10px;
+  }
+  
+  .option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .option input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .option.correct-answer {
+    color: #00ac18;
+    font-weight: bold;
+  }
+  
+  .option.incorrect-answer {
+    color: #ee0612;
+    font-weight: bold;
+  }
+  
+  .option-feedback {
+    margin-left: 30px;
+    padding: 5px 0;
+  }
+  
+  .option-feedback.correct-answer {
+    color: #00ac18;
+  }
+  
+  .option-feedback.incorrect-answer {
+    color: #ee0612;
+  }

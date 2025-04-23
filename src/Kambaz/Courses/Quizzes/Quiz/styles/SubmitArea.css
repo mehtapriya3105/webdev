@@ -1,0 +1,26 @@
+.submit-area {
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .saved-status {
+    color: #6b7780;
+    font-size: 14px;
+  }
+  
+  .submit-button {
+    background-color: #008ee2;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-button:hover {
+    background-color: #0076bd;
+  }

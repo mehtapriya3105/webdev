@@ -1,0 +1,66 @@
+{
+    "id": "html-css-fundamentals-quiz",
+    "title": "HTML & CSS Fundamentals Quiz",
+    "instructions": "This quiz covers basic concepts of HTML and CSS. Read each question carefully and select the best answer. You will have 30 minutes to complete all questions.",
+    "timeLimit": 30,
+    "questions": [
+      {
+        "id": 1,
+        "text": "An HTML label element can be associated with an HTML input element by setting their id attributes to the same value. The resulting effect is that when you click on the label text, the input element receives focus as if you had click on the input element itself",
+        "type": "true-false",
+        "points": 1,
+        "correctAnswer": 0,
+        "explanation": "True. This is how label and input elements are associated in HTML. The 'for' attribute of the label should match the 'id' attribute of the input element."
+      },
+      {
+        "id": 2,
+        "text": "Which CSS property is used to create space between the border and the content of an element?",
+        "type": "multiple-choice",
+        "points": 1,
+        "options": [
+          "margin",
+          "padding",
+          "spacing",
+          "border-spacing"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Padding creates space between an element's border and its content, while margin creates space outside the border."
+      },
+      {
+        "id": 3,
+        "text": "Which HTML tag is used to create a hyperlink?",
+        "type": "multiple-choice",
+        "points": 1,
+        "options": [
+          "<link>",
+          "<a>",
+          "<href>",
+          "<url>"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The <a> (anchor) tag is used to create hyperlinks in HTML. The href attribute specifies the URL the link goes to."
+      },
+      {
+        "id": 4,
+        "text": "Which of the following is the correct syntax for creating a CSS class selector?",
+        "type": "multiple-choice",
+        "points": 2,
+        "options": [
+          "#content { }",
+          "content { }",
+          ".content { }",
+          "*content { }"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Class selectors in CSS are denoted with a period (.) followed by the class name."
+      },
+      {
+        "id": 5,
+        "text": "The CSS box model consists of margin, border, padding, and content (from outside to inside).",
+        "type": "true-false",
+        "points": 1,
+        "correctAnswer": 0,
+        "explanation": "True. The CSS box model describes the rectangular boxes generated for elements, consisting of margin (outermost), border, padding, and content (innermost)."
+      }
+    ]
+  }

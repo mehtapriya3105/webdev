@@ -1,0 +1,35 @@
+.question-container {
+    border: 1px solid #ddd;
+    margin: 20px;
+    border-radius: 3px;
+  }
+  
+  .question-header {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .question-header h3 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  
+  .question-points {
+    color: #6b7780;
+  }
+  
+  .question-content {
+    padding: 15px;
+  }
+  
+  .question-text {
+    margin-bottom: 15px;
+  }
+  
+  .options {
+    margin-top: 20px;
+  }
